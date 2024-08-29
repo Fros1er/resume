@@ -6,109 +6,68 @@
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
-\usepackage{fontawesome}
 \usepackage{cite}
+\usepackage{graphicx}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{姓名}
+\name{徐延楷}
 
-% {E-mail}{mobilephone}{homepage}
-% be careful of _ in emaill address
-\contactInfo{\faPhone \; 132-6029-9910}{\faInbox  \; hijiangtao@gmail.com}{}{\faGithub  \; GitHub @hijiangtao}
-% {E-mail}{mobilephone}
-% keep the last empty braces!
-%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
- 
-\section{个人总结}
-本人在校成绩优秀、乐观向上，工作负责、自我驱动力强、热爱尝试新事物，认同开放、连接、共享的Web在未来的不可替代性。\textbf{现任职于阿里巴巴集团。}
+\basicInfo{
+  \email{12011525@mail.sustech.edu.cn} \textperiodcentered\
+  \phone{(+86) 189-5322-0690} \textperiodcentered\
+  \github[Fros1er]{https://github.com/Fros1er}}
 
-% \section{\faGraduationCap\ 教育背景}
-\section{教育背景}
-\ \textbf{排名11/133(前10\%)},中国科学院大学学业奖学金(2次),IEEE Student member,预计2018年6月毕业
-\datedsubsection{\textbf{北京理工大学},软件工程,\textit{工学学士}}{2011.9 - 2015.6}
-\ \textbf{排名2/62(前5\%)},国家励志奖学金,人民奖学金(7次),科技竞赛奖(2次),北京市普通高等学校优秀毕业生,北京理工大学优秀毕业生,软件学院金牌毕业生,优秀团员/优秀学生(5次)
-\datedsubsection{\textbf{荷兰 莱顿大学},计算机科学与技术,\textit{国家留学基金委公派交换生}}{2015.3 - 2015.5}
-\ 2014年中国政府奖学金(\textit{http://www.csc.edu.cn/}),DID-ACTE项目交换生(\textit{http://did-acte.org/})
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{南方科技大学}，深圳}{2020 -- 2024}
+本科，计算机科学与技术。
 
-% \section{\faCogs\ IT 技能}
-\section{技术能力}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.2ex]
-  \item \textbf{编程语言}: JavaScript (ECMAScript, Node.js), HTML/CSS, Python, Go, SQL, C, Shell
-  \item \textbf{操作系统,数据库与工程构建}: Linux/macOS/MySQL/MongoDB/Git/webpack/Progressive Web App
-  \item \textbf{关键词}: React/Vue.js/D3.js(SVG)/three.js(canvas, WebGL)/chrome extension/Express
+\section{\faBook\ 专业技能}
+\begin{itemize}[parsep=0.5ex]
+  \item 熟悉C/C++开发，熟悉C++17及常用stl，能够使用gdb、make、cmake、vcpkg。
+  \item 工作电脑是ubuntu，较少遇到配环境问题。熟练使用git。较为熟练的使用java、rust、python、js。
+  \item CET6 586/710，熟练阅读英文技术文档。能够在github上使用英文进行交流。
+  \item 查阅过RISC-V ISA、debug标准、Vector扩展的文档。对RISC-V有一定的了解。
+  \item 有独立测试、调试、分析查错的能力，懂得如何提问。
 \end{itemize}
 
-% \end{itemize}
+\newcommand{\customtitle}[2]{\parbox[t]{#1}{\raggedright #2}}
 
-\section{实习经历}
-\datedsubsection{\textbf{阿里巴巴集团 | Alibaba}, 前端开发工程师}{2017.6-2017.9}
-\begin{itemize}
-%   \item 飞猪北京前端团队全面负责各交通线的票务(机票/火车票/汽车票) web 应用与事业群基础架构研发
-  \item 独立负责车站地图开发(React),通过HTML5 本地存储及JSBridge实现在阿里全系应用中发布上线
-  \item 独立负责BU SPM chrome插件开发,支付成功/订单详情等页面的开发与交叉营销的接入工作
-\end{itemize}
+\section{\faUsers\ 实习经历}
+\begin{onehalfspacing}
+  \datedrolesubsection{ApeCloud}{数据库系统开发实习}{2023年7月 -- 2023年9月}
+  在fork自阿里PolarDB-X的数据库上进行开发。工作包括：在数据库中优化Decimal相关的计算和存储、修复SQL命令执行相关的bug、添加自动化测试并配置CI/CD、重构已有代码。在工作任务之外开发了一个自动化脚本，用于快速进行常用配置和手动测试，被广泛使用并提升了项目组工作效率。
+\end{onehalfspacing}
 
-\datedsubsection{\textbf{北京腾云天下科技有限公司 | TalkingData},数据挖掘与可视化工程师}{2015.11-2017.5}
-\begin{itemize}
-  \item \textbf{利用海量用户定位数据，对城市空间及人群移动特征进行研究。}第一个课题是基于香农熵和人群出行模式，构建城市网格与用户矩阵分析城市多样性/流动性分布；可视分析平台前端与可视化基于D3/Vue/Express开发，数据分析与存储采用Python/MySQL/MongoDB技术，为了均衡大数据情况下的页面可视化渲染消耗用canvas替代svg。
-  \item 负责数据科学部HQ LAB的可视化原型开发，主导 TalkingMind 平台系统设计与前端开发
-\end{itemize}
+\begin{onehalfspacing}
+  \datedrolesubsection{深圳国际量子研究院}{软件开发}{2022年11月 -- 2023年5月}
+  使用C++精简实验室测控用RPC系统scalabrad。系统类似一个RPC系统的registry，支持节点的注册、查找、服务调用和消息通知。系统使用cmake和vcpkg构建到不同OS，使用boost::asio的coroutine维护子节点tcp连接和收发消息，使用boost::qi将LabRad协议文本解析为AST，通过模板实现仅使用一次内存分配构建固定格式的数据包。精简后的系统改善了启动时间和资源占用，已被实验室接收。
+\end{onehalfspacing}
 
-\datedsubsection{\textbf{北京格灵深瞳信息技术有限公司 | DeepGlint},Web开发工程师}{2015.7-2015.9}
-\begin{itemize}
-  \item \textbf{独立负责MUSE部门的可视化组件研发。}与平台研发、设计协作完成 DeepGlint Developer 平台可视化图表组件的集成开发，符合完全定制化渲染、响应式布局与实时更新等特点
-  \item 利用 D3+Vue+WebGL(Three.js) 尝试实现三维空间的人群移动可视化
-\end{itemize}
+\section{\faCogs\ 项目经历}
+\begin{onehalfspacing}
+  \datedsubsection{\textbf{Nemu-Rust}}{}
+  使用Rust从头实现南京大学《计算机系统基础》课程包含的RISC-V ISA模拟器。项目包含RV64I指令的模拟、基于sdl的外设模拟、简易调试器以及qemu difftest。模拟器性能达到native的4.7\%，可以运行红白机游戏。
+\end{onehalfspacing}
 
-% \begin{onehalfspacing}
-% \end{onehalfspacing}
+\begin{onehalfspacing}
+  \datedsubsection{\textbf{一种c风格简易编程语言的编译器}}{}
+  课程项目。针对一种c风格简易编程语言，使用C++实现了编译器的前端。项目使用flex和bison进行词法分析和语法分析，并生成AST。项目随后利用AST生成中间代码表示（四地址码），进行不可达代码消除和限定条件下的复制传播优化和条件跳转简化。
+\end{onehalfspacing}
 
-% \datedsubsection{\textbf{DID-ACTE} 荷兰莱顿}{2015年3月 - 2015年6月}
-% \role{本科毕业设计}{LIACS 交换生}
-% 利用结巴分词对中国古文进行分词与词性标注，用已有领域知识训练形成 classifier 并对结果进行调优
-% \begin{onehalfspacing}
-% \begin{itemize}
-%   \item 利用结巴分词对中国古文进行分词与词性标注
-%   \item 利用已有领域知识训练形成 classifier, 并用分词结果进行测试反馈
-%   \item 尝试不同规则，对 classifier 进行调优
-% \end{itemize}
-% \end{onehalfspacing}
-
-\section{竞赛获奖/项目作品}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.2ex]
-%   \item LeetCodeOJ Solutions, \textit{https://github.com/hijiangtao/LeetCodeOJ}
-  \item 第三届中国软件杯大学生软件设计大赛\textbf{全国一等奖}( 
-  \item 中国机器人大赛创意设计大赛\textbf{全国特等奖}( \textit{http://www.rcccaa.org/} ),2013年8月
-%   \item 中国机器人大赛暨Robocup公开赛(武术擂台赛)全国一等奖,2013年10月
-  \item 第11届北京理工大学“世纪杯”竞赛学生课外科技作品竞赛\textbf{特等奖},2013年8月
- \textit{https://hijiangtao.github.io/ss-vis-component/}
-  \item 个人博客：\textit{https://hijiangtao.github.io/}，更多作品见 \textit{https://github.com/hijiangtao}
-%   \item 电视节目"爸爸去哪儿"可视化分析展示, \textit{https://hijiangtao.github.io/variety-show-hot-spot-vis/}
-\end{itemize}
-
-% \section{\faHeartO\ 项目/作品摘要}
-% \section{项目/作品摘要}
-% \datedline{\textit{An Integrated Version of Security Monitor Vis System}, https://hijiangtao.github.io/ss-vis-component/ }{}
-% \datedline{\textit{Dark-Tech}, https://github.com/hijiangtao/dark-tech/ }{}
-% \datedline{\textit{融合社交网络数据挖掘的电视节目可视化分析系统}, https://hijiangtao.github.io/variety-show-hot-spot-vis/}{}
-% \datedline{\textit{LeetCodeOJ Solutions}, https://github.com/hijiangtao/LeetCodeOJ}{}
-% \datedline{\textit{Info-Vis}, https://github.com/ISCAS-VIS/infovis-ucas}{}
+\begin{onehalfspacing}
+  \datedsubsection{\textbf{其他RISC-V相关项目}}{}
+  在某比赛中使用RISC-V Vector扩展加速GMSSL运算。在学校项目中使用RISC-V debug的Trigger配合GDB stub实现GDB远程调试裸机程序。
+\end{onehalfspacing}
 
 
-% \section{\faInfo\ 社会实践/其他}
-\section{社区参与/实践其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.2ex]
-  \item 乐于参与开源社区讨论,\textbf{参与翻译 Vue.js, webpack, WebAssembly, Babel 文档，印记中文成员}
-  \item 中国科学院大学2016秋季学期可视化与可视分析课程助教，\textit{http://vis.ios.ac.cn/infovis-ucas/}
-\end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\section{\faGithub\ 社区参与}
+\subsection{fmt~PR\#3293}
+为c++字符串格式化库fmt添加在windows下通过utf-16路径打开文件的支持。已被开发者合并。
+
+\subsection{AmazeFileManager~PR\#3226}
+修复了开源安卓文件管理器AmazeFileManager中文件列表为空指针、分享文件来源判断错误两个bug。已被开发者合并。
+
 \end{document}
