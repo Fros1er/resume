@@ -23,7 +23,7 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{徐延楷}
+\name{这是名字}
 
 \basicInfo{
   \email{12011525@mail.sustech.edu.cn} \textperiodcentered\
@@ -31,62 +31,58 @@
   \github[Fros1er]{https://github.com/Fros1er}}
 
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{南方科技大学}，深圳}{2024 -- }
-硕士，计算机科学与技术。
-\datedsubsection{\textbf{南方科技大学}，深圳}{2020 -- 2024}
-本科，计算机科学与技术。专业课程绩点：3.79/4.00
-\begin{itemize}[parsep=0.5ex]
-  \item A 及以上课程：操作系统、计算机网络、软件工程、数字逻辑、编译原理、计算机安全、组成原理。
-\end{itemize}
+\datedsubsection{\textbf{南方科技大学}，深圳}{}
+\datedline{硕士，计算机科学与技术。}{2024 -- 预期2027毕业}
+\datedline{本科，计算机科学与技术。专业课程绩点：3.79/4.00}{2020 -- 2024}
+
 
 \section{\faBook\ 专业技能}
 \begin{itemize}[parsep=0.5ex]
-  \item 熟悉Chisel、Verilog，较为熟练的使用C/C++、java、python、js。
-  \item 工作电脑是Ubuntu，较少遇到配环境问题。能够使用git、gdb、make等常用工具。
+  \item 熟悉C/C++开发，熟悉面向对象编程思想及常用设计模式，熟悉C++17及常用stl，能够使用gdb、make、cmake、vcpkg。
+  \item 熟悉 Socket 网络编程，熟悉 TCP/IP，HTTP 等网络协议, 了解 select、poll、epoll 多路 IO 复用模型。
+  \item 工作电脑使用Ubuntu，较少遇到配环境问题。熟悉 Linux 下常用命令，熟悉git使用。
+  \item 熟悉java、rust、python、js、数据库的使用。有独立测试、调试、分析查错的能力，懂得如何提问。
   \item CET6 586/710，熟练阅读英文技术文档。能够在github上使用英文进行交流。
 \end{itemize}
-
-\newcommand{\customtitle}[2]{\parbox[t]{#1}{\raggedright #2}}
-
-\section{\faCogs\ 项目经历}
-\begin{onehalfspacing}
-  \datedsubsection{\textbf{简易CPU}}{\url{https://github.com/Fros1er/Simple_Minisys_CPU/}}
-  计算机组成原理课程项目。一个支持基本数学运算、跳转指令和访问block memory的单周期cpu，使用Verilog编写。CPU支持可配置GPIO，少数的异常和外部中断，以及中断嵌套。
-\end{onehalfspacing}
-
-\begin{onehalfspacing}
-  \datedsubsection{\textbf{RocketChip协处理器}}{}
-  毕业设计。利用RocketChip的RoCC接口实现了可配置并执行指令的协处理器。使用Chisel实现。
-\end{onehalfspacing}
-
-\begin{onehalfspacing}
-  \datedsubsection{\textbf{Nemu-Rust}}{\url{https://github.com/Fros1er/Nemu-rust/}}
-  使用Rust从头实现南京大学《计算机系统基础》课程包含的RISC-V ISA模拟器。项目包含RV64I指令的模拟、基于sdl的外设模拟、简易调试器以及qemu difftest。模拟器性能达到native的4.7\%，可以运行仙剑奇侠传、opensbi和教学用OS。
-\end{onehalfspacing}
-
-
-
-% \begin{onehalfspacing}
-%   \datedsubsection{\textbf{一种c风格简易编程语言的编译器}}{}
-%   课程项目。针对一种c风格简易编程语言，使用C++实现了编译器的前端。项目使用flex和bison进行词法分析和语法分析，并生成AST。项目随后利用AST生成中间代码表示（四地址码），进行不可达代码消除和限定条件下的复制传播优化和条件跳转简化。
-% \end{onehalfspacing}
 
 \section{\faUsers\ 实习经历}
 \begin{onehalfspacing}
   \datedrolesubsection{ApeCloud}{数据库系统开发实习}{2023年7月 -- 2023年9月}
-  在fork自阿里PolarDB-X的数据库上进行开发。工作包括：在数据库中优化Decimal相关的计算和存储、修复SQL命令执行相关的bug、添加自动化测试并配置CI/CD、重构已有代码。在工作任务之外开发了一个自动化脚本，用于快速进行常用配置和手动测试，被广泛使用并提升了项目组工作效率。
+  在fork自阿里PolarDB-X的数据库上进行开发。工作包括：在数据库中优化Decimal相关的计算和存储、修复SQL命令执行相关的bug、添加自动化测试并配置CI/CD、重构已有代码。在工作任务之外开发了自动化脚本，用于快速进行常用配置和测试，被项目组内广泛使用，提升了工作效率。
 \end{onehalfspacing}
 
 \begin{onehalfspacing}
   \datedrolesubsection{深圳国际量子研究院}{软件开发}{2022年11月 -- 2023年5月}
-  使用C++精简实验室测控用RPC系统scalabrad。系统类似一个RPC系统的registry，支持节点的注册、查找、服务调用和消息通知。系统使用cmake和vcpkg构建到不同OS，使用boost::asio的coroutine维护子节点tcp连接和收发消息，使用boost::qi将LabRad协议文本解析为AST，通过模板实现仅使用一次内存分配构建固定格式的数据包。精简后的系统改善了启动时间和资源占用，已被实验室接收。
+  使用C++重构并精简实验室测控用RPC系统scalabrad。系统类似一个RPC系统的registry，支持节点的注册、查找、服务调用和消息通知。系统使用cmake和vcpkg构建到不同OS；使用boost::asio的coroutine维护子节点tcp连接并收发消息；使用boost::qi解析LabRad协议数据包文本；对于固定格式数据包的构建，使用模板优化到在一次内存分配下构建；支持网络错误重试，支持服务可用性改变时对节点的广播。精简后的系统改善了启动时间和资源占用，已被实验室接收。
 \end{onehalfspacing}
+
+\section{\faCogs\ 项目经历}
+
+\begin{onehalfspacing}
+  \datedsubsection{\textbf{轻量级 c++ 无栈协程调度器与 TCP 服务器}}{\url{https://github.com/Fros1er/coro-server/}}
+  使用 c++20 无栈协程特性，借鉴 golang 的调度算法实现了简易的协程调度器，并基于该调度器和 epoll 实现了 TCP 服务器。项目的调度算法实现了全局运行队列、全局等待队列和局部运行队列，支持将协程分发至不同工作线程，支持工作窃取算法；项目使用 mutex 保证资源安全，使用条件变量实现无任务时的线程挂起；项目实现了基于优先队列的协程挂起，基于原子操作的协程内互斥锁，和epoll 阻塞模式在协程内的封装；项目使用 epoll 的 ET 模式监听事件，使用基于协程的 Reactor 并发模型进行事件处理。
+\end{onehalfspacing}
+
+\begin{onehalfspacing}
+  \datedsubsection{\textbf{Nemu-Rust (Rust实现的RISC-V 模拟器)}}{\url{https://github.com/Fros1er/Nemu-rust/}}
+  使用 Rust 从头实现南京大学《计算机系统基础》课程包含的 RISC-V ISA 模拟器。项目包含对 rv64ima 指令集、sv39 分页机制和权限级别的模拟、基于 sdl 和 tokio 的外设及中断模拟、简易调试器以及 qemu difftest。模拟器性能达到 native 的 4.7\%，可以运行仙剑奇侠传、opensbi 和教学用 OS。
+
+\end{onehalfspacing}
+
+
 
 \section{\faGithub\ 社区参与}
 \begin{itemize}[parsep=0.5ex]
-  \item {\large \textbf{llvm-project:}} 3PRs, 2Issues。修复llvm后端中有关RISC-V向量化的几个问题。
+  \item {\large \textbf{llvm-project:}} 3PRs, 2Issues。在llvm后端中添加对特定代码的RISC-V V扩展自动向量化支持。
   \item {\large \textbf{fmt:}} PR\#3293。添加在windows下通过utf-16路径打开文件的支持。
   \item {\large \textbf{AmazeFileManager:}} PR\#3226。修复文件列表为空指针、分享文件来源判断错误两个bug。
 \end{itemize}
+
+
+% ---------------------------------------------
+
+% \input{src/replaceable.tex}
+
+
 
 \end{document}

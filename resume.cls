@@ -33,10 +33,10 @@
 
 \RequirePackage[
 	a4paper,
-	left=0.8in,
-	right=0.8in,
-	top=0.45in,
-	bottom=0.55in,
+	left=0.7in,
+	right=0.7in,
+	top=0.4in,
+	bottom=0.4in,
 	nohead
 ]{geometry}
 
@@ -119,10 +119,16 @@
 
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
-  \vspace{1.5ex}
+  \vspace{0.75ex}
 }
 
 \newcommand{\role}[1]{
   {\par \textit{#1} \par}
   \vspace{0.85ex}
 }
+
+\pdfstringdefDisableCommands{%
+  \def\FA{}%
+}
+
+\newcommand{\customtitle}[2]{\parbox[t]{#1}{\raggedright #2}}
