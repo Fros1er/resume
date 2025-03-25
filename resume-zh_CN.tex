@@ -9,6 +9,12 @@
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{titlesec}
+
+\titlespacing*{\subsection} {0pt}{-1ex}{0ex}
+\titlespacing*{\section} {0pt}{-0.5ex}{1.5ex}
+
 \hypersetup{
   colorlinks=false,
   linkcolor=blue,
@@ -23,65 +29,83 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
+% \name{徐延楷}
 \name{这是名字}
 
 \basicInfo{
-  \email{12011525@mail.sustech.edu.cn} \textperiodcentered\
-  \phone{(+86) 189-5322-0690} \textperiodcentered\
+  % \email{12011525@mail.sustech.edu.cn} \textperiodcentered\
+  % \phone{(+86) 189-5322-0690} \textperiodcentered\
+  % \github[Fros1er]{https://github.com/Fros1er}}
+  \email{school\_mail@mail.sustech.edu.cn} \textperiodcentered\
+  \phone{(+86) 这是电话} \textperiodcentered\
   \github[Fros1er]{https://github.com/Fros1er}}
 
 \section{\faGraduationCap\  教育背景}
 \datedsubsection{\textbf{南方科技大学}，深圳}{}
+\begin{spacing}{1.125}
 \datedline{硕士，计算机科学与技术。}{2024 -- 预期2027毕业}
 \datedline{本科，计算机科学与技术。专业课程绩点：3.79/4.00}{2020 -- 2024}
-
+\end{spacing}
 
 \section{\faBook\ 专业技能}
 \begin{itemize}[parsep=0.5ex]
-  \item 熟悉C/C++开发，熟悉面向对象编程思想及常用设计模式，熟悉C++17及常用stl，能够使用gdb、make、cmake、vcpkg。
-  \item 熟悉 Socket 网络编程，熟悉 TCP/IP，HTTP 等网络协议, 了解 select、poll、epoll 多路 IO 复用模型。
-  \item 工作电脑使用Ubuntu，较少遇到配环境问题。熟悉 Linux 下常用命令，熟悉git使用。
-  \item 熟悉java、rust、python、js、数据库的使用。有独立测试、调试、分析查错的能力，懂得如何提问。
-  \item CET6 586/710，熟练阅读英文技术文档。能够在github上使用英文进行交流。
+  \item 熟悉C/C++开发，C++17及常用stl。能够使用gdb、make、cmake、vcpkg进行调试与构建。
+  \item 熟悉面向对象编程、设计模式。了解Linux系统编程及网络编程，如IO多路复用模型，协程等技术。
+  \item 熟悉Java、Python、JS、Rust、SQL。熟悉git使用，了解Linux下常用命令。
+  \item 能快速学习并切入大型项目开发。具备独立调试、分析、排错的能力，懂得如何提问。
+  \item CET6 586/710，能流畅阅读英文技术文档。在GitHub参与过大型项目的开源贡献，能使用英文交流。
 \end{itemize}
 
 \section{\faUsers\ 实习经历}
-\begin{onehalfspacing}
-  \datedrolesubsection{ApeCloud}{数据库系统开发实习}{2023年7月 -- 2023年9月}
-  在fork自阿里PolarDB-X的数据库上进行开发。工作包括：在数据库中优化Decimal相关的计算和存储、修复SQL命令执行相关的bug、添加自动化测试并配置CI/CD、重构已有代码。在工作任务之外开发了自动化脚本，用于快速进行常用配置和测试，被项目组内广泛使用，提升了工作效率。
-\end{onehalfspacing}
 
-\begin{onehalfspacing}
-  \datedrolesubsection{深圳国际量子研究院}{软件开发}{2022年11月 -- 2023年5月}
-  使用C++重构并精简实验室测控用RPC系统scalabrad。系统类似一个RPC系统的registry，支持节点的注册、查找、服务调用和消息通知。系统使用cmake和vcpkg构建到不同OS；使用boost::asio的coroutine维护子节点tcp连接并收发消息；使用boost::qi解析LabRad协议数据包文本；对于固定格式数据包的构建，使用模板优化到在一次内存分配下构建；支持网络错误重试，支持服务可用性改变时对节点的广播。精简后的系统改善了启动时间和资源占用，已被实验室接收。
-\end{onehalfspacing}
+\datedrolesubsection{蚂蚁密算}{研究型实习}{2024年11月 -- 至今}
+\begin{spacing}{1.125}
+  合作进行\textbf{xPU TEE}相关项目的论文写作，并协助在arm设备上配置基于TPM的u-boot+linux kernel可信启动。\textbf{（TODO）这个刚开始没多久，不知道写啥}
+\end{spacing}
+
+% \datedrolesubsection{PLCT实验室}{}{2024年7月 -- 2024年10月}
+% \begin{spacing}{1.125}
+% 搞LLVM，给RISC-V V自动向量化交了三个pr，合了。不想写这个实习。经历太杂了，列出来都想笑。
+% \end{spacing}
+
+\datedrolesubsection{ApeCloud}{数据库系统开发实习}{2023年7月 -- 2023年9月}
+\begin{spacing}{1.125}
+  参与\textbf{基于PolarDB-X fork和Amazon S3}的一款\textbf{OLAP数据库}开发。贡献包括：以层次化的方式重新组织\textbf{对象存储目录结构}，利用\textbf{S3 prefix}简化管理；修复\textbf{SQL执行、数据文件管理}相关bug；参考现有方案，\textbf{优化DECIMAL存储}，将能够由\textbf{int128存储的数值进行压缩}，减少存储开销；在工作任务之外主动\textbf{重构代码}以提高可维护性，并开发\textbf{自动化脚本}加速配置和测试流程，被项目组内广泛使用以提高效率。
+\end{spacing}
+
+\datedrolesubsection{深圳国际量子研究院}{软件开发}{2022年11月 -- 2023年5月}
+\begin{spacing}{1.125}
+  \textbf{独立}使用C++重构并裁剪实验室测控系统scalabrad。该系统类似\textbf{中心化的RPC框架}，用于控制和读取实验设备。系统使用\textbf{Boost.Asio}以\textbf{单线程协程}模型实现TCP长连接，减少同步锁开销，简化代码逻辑；结合\textbf{源码分析和Wireshark抓包}逆向解析协议，完整复刻行为；基于\textbf{Boost.Qi}解析复杂协议文本结构；使用\textbf{变长模板在编译期计算数据包大小}，提高构建效率。系统\textbf{服务调用加速13\%，内存占用仅为1\%}。
+\end{spacing}
 
 \section{\faCogs\ 项目经历}
 
-\begin{onehalfspacing}
-  \datedsubsection{\textbf{轻量级 c++ 无栈协程调度器与 TCP 服务器}}{\url{https://github.com/Fros1er/coro-server/}}
-  使用 c++20 无栈协程特性，借鉴 golang 的调度算法实现了简易的协程调度器，并基于该调度器和 epoll 实现了 TCP 服务器。项目的调度算法实现了全局运行队列、全局等待队列和局部运行队列，支持将协程分发至不同工作线程，支持工作窃取算法；项目使用 mutex 保证资源安全，使用条件变量实现无任务时的线程挂起；项目实现了基于优先队列的协程挂起，基于原子操作的协程内互斥锁，和epoll 阻塞模式在协程内的封装；项目使用 epoll 的 ET 模式监听事件，使用基于协程的 Reactor 并发模型进行事件处理。
-\end{onehalfspacing}
 
-\begin{onehalfspacing}
-  \datedsubsection{\textbf{Nemu-Rust (Rust实现的RISC-V 模拟器)}}{\url{https://github.com/Fros1er/Nemu-rust/}}
-  使用 Rust 从头实现南京大学《计算机系统基础》课程包含的 RISC-V ISA 模拟器。项目包含对 rv64ima 指令集、sv39 分页机制和权限级别的模拟、基于 sdl 和 tokio 的外设及中断模拟、简易调试器以及 qemu difftest。模拟器性能达到 native 的 4.7\%，可以运行仙剑奇侠传、opensbi 和教学用 OS。
+\datedsubsection{\textbf{轻量级C++无栈协程调度器与TCP服务器}}{\url{https://github.com/Fros1er/coro-server/}}
+\begin{spacing}{1.125}
+  基于\textbf{C++20无栈协程}，借鉴\textbf{Golang协程调度算法}实现轻量级协程调度器。项目支持\textbf{跨线程协程调度}，实现了\textbf{全局/局部运行队列、工作窃取}，减少线程负载不均问题；提供\textbf{基于优先队列的协程调度，基于原子操作的协程内互斥锁，以及epoll阻塞模式的协程封装}；基于该协程调度器实现了TCP服务器，采用\textbf{epoll ET模式，并结合Reactor并发模型}进行事件处理。\textbf{TODO：添加benchmark}
+\end{spacing}
 
-\end{onehalfspacing}
+\datedsubsection{\textbf{Nemu-Rust (Rust实现的RISC-V 模拟器)}}{\url{https://github.com/Fros1er/Nemu-rust/}}
+\begin{spacing}{1.125}
+  使用Rust实现RISC-V模拟器，支持\textbf{rv64ima 指令集、sv39分页、特权级、外设、中断}。使用\textbf{perf、火焰图、AMD uProf}进行性能调优，实现与qemu的\textbf{difftest}进行正确性验证。裸机环境下microbench性能达 \textbf{native CPU的0.75\%}，可运行\textbf{仙剑奇侠传，完整启动opensbi+Linux（可在busybox shell运行CoreMark）}。
+
+\end{spacing}
 
 
 
 \section{\faGithub\ 社区参与}
+\begin{spacing}{1.125}
 \begin{itemize}[parsep=0.5ex]
-  \item {\large \textbf{llvm-project:}} 3PRs, 2Issues。在llvm后端中添加对特定代码的RISC-V V扩展自动向量化支持。
-  \item {\large \textbf{fmt:}} PR\#3293。添加在windows下通过utf-16路径打开文件的支持。
-  \item {\large \textbf{AmazeFileManager:}} PR\#3226。修复文件列表为空指针、分享文件来源判断错误两个bug。
+  \item {\large \textbf{llvm-project:}} 3PRs, 2Issues。PR\#95563修复trunc(srl) 误优化，修复RISC-V V 扩展下truncate指令生成冗余；PR\#100749放宽binop(splat, splat)的标量化条件，使非合法类型得以优化，影响十几个test case，解法获maintainer认可。Issue\#104596通过benchmark发现特定函数无法向量化，并定位原因。
+  \item {\large \textbf{fmt:}} PR\#3293通过新增API和字符编码转换，使fmt::file支持\textbf{Windows UTF-16文件路径}。
+  \item {\large \textbf{AmazeFileManager:}} PR\#3226修复文件列表为空指针、分享文件来源判断错误两个bug。
 \end{itemize}
-
+\end{spacing}
 
 % ---------------------------------------------
 
-% \input{src/replaceable.tex}
+\input{src/replaceable.tex}
 
 
 
